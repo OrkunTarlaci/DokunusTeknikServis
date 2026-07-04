@@ -755,133 +755,56 @@
         padding: 4rem 0;
       }
     }
-    .slider-container {
-      position: relative;
+    .stock-contact-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2rem 2rem 2.2rem;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+    .stock-card-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.2rem;
+      background: #EEF5FF;
+      color: var(--blue);
       border-radius: 18px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .stock-card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.6rem;
+    }
+    .stock-card-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
-    @media (min-width: 768px) {
-      .slider-container {
-        max-width: 760px;
-      }
-    }
-    @media (min-width: 1200px) {
-      .slider-container {
-        max-width: 720px;
-      }
-    }
-    @media (max-width: 767px) {
-      .slider-container {
-        max-width: none;
-        width: 100%;
-      }
-    }
-    .slider-image {
-      display: block;
-      width: 100%;
-      height: 430px;
-      object-fit: contain;
-      object-position: center;
-      background: #F5F8FC;
-      border-radius: 18px;
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    @media (max-width: 1023px) {
-      .slider-image {
-        height: 400px;
-      }
-    }
-    @media (max-width: 767px) {
-      .slider-image {
-        height: 280px;
-        object-fit: contain;
-        object-position: center;
-      }
-    }
-    .slider-placeholder {
-      width: 100%;
-      aspect-ratio: 16/9;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #EEF5FF 0%, #F8FAFD 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: var(--blue-dark);
-      text-align: center;
-      padding: 2rem;
-    }
-    .slider-placeholder svg {
-      margin-bottom: 1rem;
-      opacity: 0.6;
-    }
-    .slider-placeholder .placeholder-title {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-    }
-    .slider-placeholder .placeholder-sub {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-    .slider-overlay {
-      position: absolute;
-      right: 12px;
-      bottom: 12px;
-      background: rgba(0,0,0,0.55);
-      color: white;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-    .slider-dots {
+    .stock-card-actions {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 1.2rem;
-    }
-    @media (min-width: 768px) {
-      .slider-dots {
-        max-width: 760px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    @media (min-width: 1200px) {
-      .slider-dots {
-        max-width: 720px;
-      }
-    }
-    .slider-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #D1D9E6;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .slider-dot.active {
-      background: var(--orange);
-    }
-    .second-hand-actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
     @media (max-width: 639px) {
-      .second-hand-actions {
+      .stock-card-actions {
         display: grid;
         grid-template-columns: 1fr;
       }
-      .second-hand-actions .btn {
+      .stock-card-actions .btn {
         width: 100%;
+        min-height: 52px;
       }
     }
     .process {
@@ -1430,13 +1353,24 @@
 
     <section class="second-hand" id="ikinci-el">
       <div class="container">
-        <h2 class="section-title text-center-title">2. El Beyaz Eşya Alım ve Satım</h2>
-        <p class="section-subtitle" style="text-align:center;">Güncel ikinci el beyaz eşya ve ev cihazlarımızı inceleyin. Ürünler hakkında detaylı bilgi almak için bizimle iletişime geçebilirsiniz.</p>
-        <div class="slider-container" id="slider-container"></div>
-        <div class="slider-dots" id="slider-dots"></div>
-        <div class="second-hand-actions">
-          <a href="tel:05444164178" class="btn btn-primary">Ürünler İçin Bilgi Al</a>
-          <a href="https://wa.me/905444164178?text=Merhaba%2C%20g%C3%BCncel%20ikinci%20el%20%C3%BCr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp'tan Sor</a>
+        <h2 class="section-title text-center-title">2. El Beyaz Eşya Alım & Satım</h2>
+        <p class="section-subtitle" style="text-align:center;">Güncel ikinci el beyaz eşya stoklarımız sürekli değişmektedir. Satışta olan ürünlerimiz, ürün durumu ve fiyat bilgisi için bizimle iletişime geçebilirsiniz.</p>
+        <div class="stock-contact-card">
+          <div class="stock-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="2" width="18" height="20" rx="2"/><path d="M3 7h18"/><circle cx="8" cy="12" r="1.5"/><path d="M16 4.5v3"/><circle cx="16" cy="12" r="1.5"/></svg>
+          </div>
+          <h3 class="stock-card-title">Güncel Stok Bilgisi Alın</h3>
+          <p class="stock-card-desc">Satışta bulunan çamaşır makinesi, bulaşık makinesi, buzdolabı ve diğer ikinci el beyaz eşya seçenekleri hakkında güncel bilgi almak için bizi arayın veya WhatsApp üzerinden iletişime geçin.</p>
+          <div class="stock-card-actions">
+            <a href="tel:05444164178" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Hemen Ara
+            </a>
+            <a href="https://wa.me/905444164178?text=Merhaba%2C%20g%C3%BCncel%20ikinci%20el%20beyaz%20e%C5%9Fya%20stoklar%C4%B1n%C4%B1z%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              WhatsApp'tan Stok Sor
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -1718,124 +1652,6 @@
           container.appendChild(card);
         });
       }
-
-      const secondHandImages = [
-        "1BulaşıkMakinesi.png",
-        "1camasırmakinesi.png"
-      ];
-
-      const sliderContainer = document.getElementById('slider-container');
-      const sliderDots = document.getElementById('slider-dots');
-      
-      let validImages = [];
-      let currentIndex = 0;
-      let autoInterval;
-      let isHovering = false;
-
-      function createPlaceholder() {
-        sliderContainer.innerHTML = `
-          <div class="slider-placeholder">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-            <p class="placeholder-title">2. El Ürün Fotoğrafı Yakında Eklenecek</p>
-            <p class="placeholder-sub">Güncel ürün bilgisi için bizimle iletişime geçebilirsiniz.</p>
-          </div>`;
-        sliderDots.innerHTML = '';
-      }
-
-      function updateSlider(index) {
-        const img = sliderContainer.querySelector('.slider-image');
-        if (img) {
-          img.style.opacity = '0';
-          img.style.transform = 'scale(1.02)';
-          setTimeout(() => {
-            img.src = validImages[index];
-            img.style.opacity = '1';
-            img.style.transform = 'scale(1)';
-          }, 200);
-        }
-        document.querySelectorAll('.slider-dot').forEach((dot, i) => {
-          dot.classList.toggle('active', i === index);
-        });
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % validImages.length;
-        updateSlider(currentIndex);
-      }
-
-      function startAuto() {
-        if (validImages.length > 1) {
-          autoInterval = setInterval(nextSlide, 4000);
-        }
-      }
-
-      function stopAuto() {
-        clearInterval(autoInterval);
-      }
-
-      function buildSlider() {
-        if (validImages.length === 0) {
-          createPlaceholder();
-          return;
-        }
-
-        sliderContainer.innerHTML = `
-          <img src="${validImages[0]}" alt="2. El ürün" class="slider-image" style="opacity:1;transform:scale(1);">
-          <div class="slider-overlay">Güncel 2. El Ürünler</div>`;
-        
-        sliderDots.innerHTML = '';
-        
-        if (validImages.length > 1) {
-          validImages.forEach((_, i) => {
-            const dot = document.createElement('button');
-            dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-            dot.setAttribute('aria-label', `Görsel ${i+1}`);
-            dot.addEventListener('click', () => {
-              currentIndex = i;
-              updateSlider(i);
-              stopAuto();
-              if (!isHovering) startAuto();
-            });
-            sliderDots.appendChild(dot);
-          });
-        }
-
-        const sliderImg = sliderContainer.querySelector('.slider-image');
-        
-        sliderContainer.addEventListener('mouseenter', () => { isHovering = true; stopAuto(); });
-        sliderContainer.addEventListener('mouseleave', () => { isHovering = false; startAuto(); });
-
-        let touchStartX = 0;
-        sliderContainer.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; });
-        sliderContainer.addEventListener('touchend', (e) => {
-          if (!touchStartX || validImages.length <= 1) return;
-          const diff = touchStartX - e.changedTouches[0].screenX;
-          if (Math.abs(diff) > 40) {
-            if (diff > 0) currentIndex = (currentIndex + 1) % validImages.length;
-            else currentIndex = (currentIndex - 1 + validImages.length) % validImages.length;
-            updateSlider(currentIndex);
-          }
-          touchStartX = 0;
-        });
-
-        startAuto();
-      }
-
-      async function checkImages() {
-        const promises = secondHandImages.map(src => {
-          return new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve(src);
-            img.onerror = () => resolve(null);
-            img.src = src;
-          });
-        });
-        const results = await Promise.all(promises);
-        validImages = results.filter(src => src !== null);
-        buildSlider();
-      }
-
-      checkImages();
 
       async function copyText(text, button) {
         try {
